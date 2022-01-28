@@ -18,7 +18,7 @@ function PageDetail(argument = '') {
             articleDOM.querySelector("p.site").innerHTML = "Website du jeu : " + `<a href='${gameData.website}'> cliquer ici </a>`;
             // // video de presentation
             articleDOM.querySelector("p.average").innerHTML = `Moyenne des notes : ${gameData.rating}/5  pour : ${gameData.ratings_count} votes`;
-            // articleDOM.querySelector("div.screenshots").innerHTML = `<img src="${gameData.short_screenshots.map((scren) => scren.image)}">`;
+            //articleDOM.querySelector("div.screenshots").innerHTML = `<img src="${gameData.short_screenshots.map((scren) => scren[0].image)}">`;
             // Le/Les lien(s) pour acheter le jeu (lien(s) externe(s))
         };
 
@@ -65,6 +65,7 @@ function PageDetail(argument = '') {
         `;
 
         preparePage();
+
     }
 
     render();
